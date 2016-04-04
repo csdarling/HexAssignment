@@ -1,1 +1,1 @@
-# HexAssignment
+# HexGame
