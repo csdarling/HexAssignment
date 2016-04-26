@@ -1,11 +1,12 @@
 package hexgame;
+
 /**
  * This interface is used to define how an instance of a Board can be communicated with.
  * 
  * DO NOT CHANGE THIS FILE
  * 
  * @author Stephen McGough
- * @version 0.1
+ * @version 0.1.1
  */
 public interface BoardInterface
 {
@@ -42,8 +43,9 @@ public interface BoardInterface
      * @throws PositionAlreadyTakenException   if there is already a Piece in this position
      * @throws InvalidPositionException        if the specified position is invalid - e.g. (-1, -1)
      * @throws InvalidColourException          if the colour being set is invalid. E.g. if you try to place two BLUE pieces one after the other
+     * @throws NoBoardDefinedException         if the board has yet to be defined with setBoardSize()
      */
-    public boolean placePiece(Piece colour, MoveInterface move) throws PositionAlreadyTakenException, InvalidPositionException, InvalidColourException;
+    public boolean placePiece(Piece colour, MoveInterface move) throws PositionAlreadyTakenException, InvalidPositionException, InvalidColourException, NoBoardDefinedException;
     
     /**
      * Checks to see if either player has won.
